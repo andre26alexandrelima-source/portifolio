@@ -22,3 +22,24 @@ function erase(){
 }
 
 type();
+
+const toggle = document.getElementById("theme-toggle");
+const icon = toggle.querySelector("i");
+
+toggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+
+  if (document.body.classList.contains("dark")) {
+    icon.classList.replace("bx-moon", "bx-sun");
+    localStorage.setItem("theme", "dark");
+  } else {
+    icon.classList.replace("bx-sun", "bx-moon");
+    localStorage.setItem("theme", "light");
+  }
+});
+
+// manter o tema salvo
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark");
+  icon.classList.replace("bx-moon", "bx-sun");
+}

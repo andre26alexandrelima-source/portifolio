@@ -154,3 +154,70 @@ main {
   border-radius:30px;
   cursor:pointer;
 }
+
+.theme-toggle {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 122, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.theme-toggle i {
+  font-size: 20px;
+  color: var(--orange);
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 122, 0, 0.25);
+}
+
+/* ===== DARK MODE ===== */
+body.dark {
+  background: #0f0f0f;
+  color: #e5e5e5;
+}
+
+body.dark .sidebar {
+  background: #141414;
+  box-shadow: 5px 0 25px rgba(0,0,0,0.6);
+}
+
+body.dark .menu a {
+  color: #aaa;
+}
+
+body.dark .menu a:hover,
+body.dark .menu a.active {
+  background: rgba(255, 122, 0, 0.2);
+  color: #ff9a3c;
+}
+
+body.dark .card,
+body.dark .skills-list span {
+  background: #1c1c1c;
+}
+
+body.dark .section-title {
+  color: #fff;
+}
+
+body.dark .contact-form input,
+body.dark .contact-form textarea {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: #fff;
+}
+
+body.dark .contact-form input::placeholder,
+body.dark .contact-form textarea::placeholder {
+  color: #888;
+}
