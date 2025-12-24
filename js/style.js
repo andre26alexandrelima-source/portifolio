@@ -1,48 +1,24 @@
-const menuIcon = document.querySelector('#menu-icon');
-const navbar = document.querySelector('.navbar');
+const words = ["Graphic Designer","Front-end Developer","Full Stack"];
+let i=0,j=0;
+const typed=document.querySelector(".typed");
 
-menuIcon.onclick = () => {
-  navbar.classList.toggle('active');
-};
-
-window.addEventListener('scroll', () => {
-  document.querySelectorAll('section').forEach(sec => {
-    let top = window.scrollY;
-    let offset = sec.offsetTop - 150;
-    let height = sec.offsetHeight;
-    let id = sec.getAttribute('id');
-
-    if (top >= offset && top < offset + height) {
-      document.querySelectorAll('.navbar a').forEach(links => {
-        links.classList.remove('active');
-        document.querySelector('.navbar a[href*=' + id + ']').classList.add('active');
-      });
-    }
-  });
-});
-
-const texts = ["Front-end", "Back-end", "Full Stack"];
-let count = 0;
-let index = 0;
-let currentText = "";
-let letter = "";
-
-(function type() {
-  if (count === texts.length) {
-    count = 0;
+function type(){
+  if(j<words[i].length){
+    typed.textContent+=words[i][j++];
+    setTimeout(type,100);
+  }else{
+    setTimeout(erase,1500);
   }
+}
 
-  currentText = texts[count];
-  letter = currentText.slice(0, ++index);
-
-  document.querySelector(".typed-text").textContent = letter;
-
-  if (letter.length === currentText.length) {
-    setTimeout(() => {
-      index = 0;
-      count++;
-    }, 1500);
+function erase(){
+  if(j>0){
+    typed.textContent=words[i].substring(0,--j);
+    setTimeout(erase,60);
+  }else{
+    i=(i+1)%words.length;
+    setTimeout(type,400);
   }
+}
 
-  setTimeout(type, 120);
-})();
+type();

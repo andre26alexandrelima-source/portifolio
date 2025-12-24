@@ -1,167 +1,135 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfólio Pessoal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Playfair+Display:wght@500;600&family=Pacifico&display=swap"
+    rel="stylesheet">
 
   <!-- Icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
+  <!-- SIDEBAR -->
   <aside class="sidebar">
-  <h2 class="logo">AG</h2>
+    <div class="logo">André</div>
 
-  <nav class="side-nav">
-    <a href="#home">Home</a>
-    <a href="#about">Sobre</a>
-    <a href="#skills">Skills</a>
-    <a href="#portfolio">Portfólio</a>
-    <a href="#contact">Contato</a>
-  </nav>
-</aside>
+    <nav class="menu">
+      <a href="#home" class="active"><i class='bx bx-home'></i>Menu</a>
+      <a href="#about"><i class='bx bx-user'></i>Sobre</a>
+      <a href="#services"><i class='bx bx-briefcase'></i>Serviços</a>
+      <a href="#skills"><i class='bx bx-code-alt'></i>Habilades</a>
+      <a href="#portfolio"><i class='bx bx-grid-alt'></i>Portfolio</a>
+      <a href="#contact"><i class='bx bx-envelope'></i>Contato</a>
+    </nav>
+  </aside>
 
+  <!-- MAIN -->
+  <main>
 
-  <!-- HOME -->
-  <section class="home" id="home">
-    <div class="home-content">
-      <h3>Olá, eu sou</h3>
-      <h1>Seu Nome</h1>
-      <h3>E eu sou <span class="typed-text"></span></h3>
-      <p>Texto de apresentação genérico. Você pode editar depois tranquilamente.</p>
-
-      <div class="social-media">
-        <a href="#"><i class="bx bxl-instagram"></i></a>
-        <a href="#"><i class="bx bxl-linkedin"></i></a>
-        <a href="#"><i class="bx bxl-github"></i></a>
-        <a href="#"><i class="bx bxl-whatsapp"></i></a>
+    <!-- HOME -->
+    <section id="home" class="home">
+      <div class="home-text">
+        <h4>Ola, meu nome é</h4>
+        <h1><span class="script">André Lima</span></h1>
+        <h2>I’m a <span class="typed"></span></h2>
+        <p>
+          Crio sites modernos, responsivos e visualmente impactantes,
+          com foco em design e desempenho.
+        </p>
+        <a href="#about" class="btn">Mais sobre mim</a>
       </div>
 
-      <a href="#" class="btn">Download CV</a>
-    </div>
+      <div class="home-img">
+        <div class="frame"></div>
+        <img src="img/foto-menu-portfolio.png" alt="Profile">
+      </div>
+    </section>
 
-    <div class="home-img">
-      <img src="img/profile.png" alt="Perfil">
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div class="about-img">
-      <img src="img/profile.png" alt="Sobre">
-    </div>
-
-    <div class="about-content">
-      <h2 class="heading">Sobre <span>Mim</span></h2>
-      <h3>Desenvolvedor Front-end</h3>
-      <p>
-        Texto genérico sobre você. Depois é só trocar esse conteúdo.
+    <!-- ABOUT -->
+    <section id="about" class="about section">
+      <h2 class="section-title">Sobre mim</h2>
+      <p class="section-text">
+        Sou um desenvolvedor focado na criação de interfaces que combinam
+        design, usabilidade e código limpo. Gosto de construir soluções
+        que tenham boa aparência e funcionem perfeitamente.
       </p>
-      <a href="#" class="btn">Leia mais</a>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS -->
-  <section class="skills" id="skills">
-    <h2 class="heading">Minhas <span>Skills</span></h2>
+    <!-- SERVICES -->
+    <section id="services" class="services section">
+      <h2 class="section-title">Services</h2>
 
-    <div class="skills-container">
-      <div class="skill-box">HTML</div>
-      <div class="skill-box">CSS</div>
-      <div class="skill-box">JavaScript</div>
-      <div class="skill-box">React</div>
-      <div class="skill-box">Git</div>
-      <div class="skill-box">UI/UX</div>
-    </div>
-  </section>
+      <div class="cards">
+        <div class="card">
+          <i class='bx bx-palette'></i>
+          <h3>Back-end</h3>
+          <p>Modern and clean interfaces.</p>
+        </div>
 
-  <!-- SERVICES -->
-  <section class="services" id="services">
-    <h2 class="heading">Meus <span>Serviços</span></h2>
+        <div class="card">
+          <i class='bx bx-code'></i>
+          <h3>Front-end</h3>
+          <p>Responsive and animated websites.</p>
+        </div>
 
-    <div class="services-container">
-      <div class="services-box">
-        <i class="bx bx-code-alt"></i>
-        <h3>Desenvolvimento Web</h3>
-        <p>Criação de sites modernos e responsivos.</p>
-        <a href="#" class="btn">Saiba mais</a>
-      </div>
-
-      <div class="services-box">
-        <i class="bx bx-paint"></i>
-        <h3>Design UI</h3>
-        <p>Interfaces bonitas e funcionais.</p>
-        <a href="#" class="btn">Saiba mais</a>
-      </div>
-
-      <div class="services-box">
-        <i class="bx bx-mobile-alt"></i>
-        <h3>Responsividade</h3>
-        <p>Sites adaptados para todos os dispositivos.</p>
-        <a href="#" class="btn">Saiba mais</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- PORTFOLIO -->
-  <section class="portfolio" id="portfolio">
-    <h2 class="heading">Meus <span>Projetos</span></h2>
-
-    <div class="portfolio-container">
-      <div class="portfolio-box">
-        <img src="https://via.placeholder.com/400" alt="">
-        <div class="portfolio-layer">
-          <h4>Projeto 1</h4>
-          <p>Descrição do projeto</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
+        <div class="card">
+          <i class='bx bx-layer'></i>
+          <h3>Full Projects</h3>
+          <p>From idea to production.</p>
         </div>
       </div>
+    </section>
 
-      <div class="portfolio-box">
-        <img src="https://via.placeholder.com/400" alt="">
-        <div class="portfolio-layer">
-          <h4>Projeto 2</h4>
-          <p>Descrição do projeto</p>
-          <a href="#"><i class="bx bx-link-external"></i></a>
-        </div>
+    <!-- SKILLS -->
+    <section id="skills" class="skills section">
+      <h2 class="section-title">Skills</h2>
+
+      <div class="skills-list">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>UI/UX</span>
+        <span>Git</span>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CONTACT -->
-  <section class="contact" id="contact">
-    <h2 class="heading">Fale <span>Comigo</span></h2>
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="portfolio section">
+      <h2 class="section-title">Portfolio</h2>
 
-    <form>
+      <div class="projects">
+        <div class="project">Project 1</div>
+        <div class="project">Project 2</div>
+        <div class="project">Project 3</div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact section">
+      <h2 class="section-title">Contact</h2>
+
       <form class="contact-form">
-  <div class="input-group">
-    <input type="text" required>
-    <label>Nome</label>
-  </div>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button class="btn">Send Message</button>
+      </form>
+    </section>
 
-  <div class="input-group">
-    <input type="email" required>
-    <label>Email</label>
-  </div>
-
-  <div class="input-group">
-    <textarea required></textarea>
-    <label>Mensagem</label>
-  </div>
-
-  <button type="submit" class="btn">Enviar Mensagem</button>
-</form>
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <p>© 2025 - Seu Nome | Todos os direitos reservados</p>
-  </footer>
+  </main>
 
   <script src="js/style.js"></script>
 </body>
+
 </html>
